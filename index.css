@@ -1,0 +1,492 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Top Styles */
+.header-top {
+    background-color: #1a365d;
+    color: #fff;
+    padding: 8px 0;
+    font-size: 0.9rem;
+}
+
+.header-top .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-info span {
+    margin-right: 20px;
+}
+
+.top-info i {
+    margin-right: 5px;
+    color: #4299e1;
+}
+
+.top-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.top-links a:hover {
+    color: #4299e1;
+}
+
+.top-links i {
+    margin-right: 5px;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.nav-logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    text-decoration: none;
+    color: #2d3748;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.logo-text {
+    background: linear-gradient(90deg, #1a365d, #4299e1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.tagline {
+    font-size: 0.85rem;
+    color: #718096;
+    font-style: italic;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #4a5568;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #1a365d;
+    background-color: #edf2f7;
+}
+
+.nav-link i {
+    margin-left: 5px;
+    font-size: 0.8rem;
+}
+
+.offers-badge {
+    margin-left: 20px;
+}
+
+.badge {
+    background-color: #e53e3e;
+    color: white;
+    padding: 8px 22px;
+    border-radius: 20px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #4a5568;
+    cursor: pointer;
+}
+
+/* Dropdown Container */
+.dropdown-container {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    min-width: 300px;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.dropdown-container:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Help & Support Specific Dropdown */
+.help-dropdown {
+    min-width: 500px;
+    width: 500px;
+}
+
+.dropdown-header {
+    background: linear-gradient(90deg, #1a365d, #2c5282);
+    color: white;
+    padding: 20px;
+}
+
+.dropdown-header h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.dropdown-content {
+    padding: 0;
+}
+
+.support-links {
+    padding: 20px;
+}
+
+.support-link {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    text-decoration: none;
+    color: #2d3748;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+}
+
+.support-link:hover {
+    background-color: #edf2f7;
+}
+
+.support-link i {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: #4299e1;
+}
+
+.support-link h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.support-link p {
+    font-size: 0.9rem;
+    color: #718096;
+}
+
+.divider {
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 0 20px;
+}
+
+.contact-info {
+    padding: 20px;
+}
+
+.contact-info h4 {
+    margin-bottom: 15px;
+    color: #2d3748;
+}
+
+.contact-detail {
+    margin-bottom: 15px;
+}
+
+.contact-detail h5 {
+    color: #4a5568;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.contact-detail p {
+    color: #4299e1;
+    font-weight: 500;
+}
+
+.call-to-action {
+    padding: 20px;
+    background-color: #f7fafc;
+    border-top: 1px solid #e2e8f0;
+}
+
+.call-to-action h3 {
+    margin-bottom: 10px;
+    color: #2d3748;
+}
+
+.call-to-action p {
+    color: #718096;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.phone-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1a365d;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.ticket-btn {
+    background-color: #edf2f7;
+    color: #2d3748;
+    margin-right: 10px;
+}
+
+.ticket-btn:hover {
+    background-color: #e2e8f0;
+}
+
+.primary-btn {
+    background-color: #4299e1;
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #3182ce;
+}
+
+/* Main Content Styles */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f6f9fc 0%, #edf2f7 100%);
+    border-radius: 10px;
+    margin: 40px 0;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #1a365d;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #4a5568;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    color: #2d3748;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.card h2 i {
+    margin-right: 10px;
+    color: #4299e1;
+}
+
+.card p {
+    color: #718096;
+    line-height: 1.7;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1a365d;
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.95rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1100px) {
+    .help-dropdown {
+        min-width: 450px;
+        width: 450px;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 90px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: 0.3s;
+        padding: 20px 0;
+        z-index: 999;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-link {
+        padding: 15px 20px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .dropdown-container {
+        width: 100%;
+    }
+    
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        width: 100%;
+        min-width: 100%;
+        display: none;
+    }
+    
+    .dropdown-container:hover .dropdown-menu {
+        display: block;
+    }
+    
+    .help-dropdown {
+        width: 100%;
+        min-width: 100%;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    .offers-badge {
+        margin-left: 0;
+    }
+    
+    .header-top .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .top-info, .top-links {
+        margin-bottom: 5px;
+    }
+    
+    .top-links a {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .content {
+        grid-template-columns: 1fr;
+    }
+    
+    .phone-number {
+        font-size: 1.5rem;
+    }
+    
+    .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .ticket-btn {
+        margin-right: 0;
+    }
+}
